@@ -1,0 +1,13 @@
+pos_im_path = 'C:\\Users\\Richa Agrawal\\Desktop\\computer vision\\video\\re-svm\\data\\images\\pos_person'
+neg_im_path = 'C:\\Users\\Richa Agrawal\\Desktop\\computer vision\\video\\re-svm\\data\\images\\neg_person'
+min_wdw_sz = [64, 128]
+step_size = [10,10]
+orientations = 9
+pixels_per_cell = [6,6]
+cells_per_block = [2, 2]
+visualize = False
+normalize = True
+pos_feat_ph = 'C:\\Users\\Richa Agrawal\\Desktop\\computer vision\\video\\re-svm\\data\\features\\pos'
+neg_feat_ph = 'C:\\Users\\Richa Agrawal\\Desktop\\computer vision\\video\\re-svm\\data\\features\\neg'
+model_path = 'C:\\Users\\Richa Agrawal\\Desktop\\computer vision\\video\\re-svm\\data\\models'
+threshold = .3
