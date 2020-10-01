@@ -96,7 +96,15 @@ def detector(filename):
         cv2.rectangle(im, (x_tl, y_tl), (x_tl + w, y_tl + h), (0, 255, 0), thickness = 2)
     for(xA, yA, xB, yB) in pick:
         cv2.rectangle(clone, (xA, yA), (xB, yB), (0, 255, 0), 2)
-    
+    scale_percent=70
+    w=clone.shape[1]
+    h=clone.shape[0]
+
+    width = int(w * scale_percent / 100)
+    height = int(h * scale_percent / 100)
+    dim = (width, height)
+    resized = cv2.resize(
+						clone, dim, interpolation=cv2.INTER_AREA)
     plt.axis("off")
     plt.imshow(cv2.cvtColor(im, cv2.COLOR_BGR2RGB))
     plt.title("Raw Detection before NMS")
