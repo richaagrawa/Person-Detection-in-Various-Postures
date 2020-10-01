@@ -88,7 +88,15 @@ while True:
 
     for(xA, yA, xB, yB) in pick:
         cv2.rectangle(clone, (xA, yA), (xB, yB), (0, 255, 0), 2)
-    
+    scale_percent=70
+    w=im.shape[1]
+    h=im.shape[0]
+
+    width = int(w * scale_percent / 100)
+    height = int(h * scale_percent / 100)
+    dim = (width, height)
+    resized = cv2.resize(
+						im, dim, interpolation=cv2.INTER_AREA)
     cv2.imshow('webcam before nms',im)
     cv2.imshow('webcam after nms',clone)
     
