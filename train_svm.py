@@ -52,4 +52,7 @@ svm.setC(2.67)
 
 # Train
 svm.train(samples, cv2.ml.ROW_SAMPLE, labels)
+#debug the vectors 
+print(svm.support_vectors_)
+print(svm..support_)
 svm.save('C:\\Users\\Richa Agrawal\\Desktop\\computer vision\\video\\re-svm\\data\\models\\svm_data.dat')

@@ -92,12 +92,16 @@ while True:
     scale_percent=70
     w=clone.shape[1]
     h=clone.shape[0]
+    scale_percent=70
+    w=im.shape[1]
+    h=im.shape[0]
 
     width = int(w * scale_percent / 100)
     height = int(h * scale_percent / 100)
     dim = (width, height)
-    resized = cv2.resize(
-						clone, dim, interpolation=cv2.INTER_AREA)
+    resized = cv2.resize(clone, dim, interpolation=cv2.INTER_AREA)
+    resized = cv2.resize(im,
+                         dim, interpolation=cv2.INTER_AREA)
     cv2.imshow('webcam before nms',im)
     cv2.imshow('webcam after nms',clone)
     
